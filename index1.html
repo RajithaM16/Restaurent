@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="rest-icon">
+        <div id="container">
+            <div class="icon" draggable="true"><img src="icon-1.jpg"></div>
+            <div class="icon"draggable="true"><img src="icon-4.png"></div>
+            <div class="icon"draggable="true"><img src="icon-3.png"></div>
+            <div class="icon"draggable="true"><img src="kfc.png"></div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li data-content="content1"><a href="#">Dashboard</a></li>
+            <li data-content="content2"><a href="#">Recomendations</a></li>
+            <li data-content="content3"><a href="#">Chef Specials</a></li>
+            <li data-content="content4"><a href="#">Ads</a></li>
+        </ul>
+    </div>
+    <div class="content" id="content1">
+        
+    </div>
+    <div class="content" id="content2">
+        <h2>Recommendations</h2>
+        <div style="float: right;">
+        <input type="text" id="search-bar" placeholder="enter the items..">
+        <button onclick="searchRestaurants()">search</button>
+    </div>
+        <p><b>The recommended restaurents are...</b></p>
+        <div id="result-container"></div>
+    </div>
+    <div class="content" id="content3">
+        <h2>chef Specials</h2>
+        <div style="float: right;">
+        <input type="text" id="search-bar1" placeholder="Restaurent name..">
+        <button onclick="displayChefSpecials()">Search</button>
+    </div>
+    <p><b>Mostly served chef specials of our restaurant are.....</b></p>
+    <div id="chefSpecials-Container"></div>
+    </div>
+    <div class="content" id="content4">
+        <h2>Ads</h2>
+        <form id="adForm" enctype="multipart/form-data">
+            <label for="audioAd" style="color: white;">Upload Audio Ad:</label>
+            <input type="file" id="audioAd" accept="audio/*" required><br>
+      
+            <label for="videoAd"style="color: white;">Upload Video Ad:</label>
+            <input type="file" id="videoAd" accept="video/*" required><br>
+      
+            <button type="submit">Upload Ads</button>
+        </form>
+        <div id="adStatus"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
